@@ -15,7 +15,11 @@
     </asset>
     <worldbody>
         <body>
+            <freejoint/>
             <geom name="green_sphere" pos=".2 .2 10" size="1" rgba="0 1 0 1"/>
+        </body>
+        <body>
+            <include file="menagerie_models/boston_dynamics_spot/spot.xml"/>
         </body>
     </worldbody>
 </mujoco>
