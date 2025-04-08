@@ -9,10 +9,14 @@ readme = "README.md"
 requires-python = ">=3.10, <4.0"
 dependencies = [
     "mujoco (>=3.3.0,<4.0.0)",
-    "taskipy (>=1.14.1,<2.0.0)"
+    "taskipy (>=1.14.1,<2.0.0)",
+    "tyro (>=0.9.18,<0.10.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+terrain_test = "python -m mujoco"

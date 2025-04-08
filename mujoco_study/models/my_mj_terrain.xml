@@ -1,0 +1,12 @@
+<mujoco>
+    <compiler angle="radian" texturedir="assets/textures" meshdir="assets/meshes"/>
+    <asset>
+        <mesh name="terrain_mesh" file="my_mj_terrain.obj"/>
+    </asset>
+    <worldbody>
+        <camera name="closeup" pos="0 0 3"/>
+        <body name="terrain" pos="0 0 0">
+            <geom type="mesh" mesh="terrain_mesh" />
+        </body>
+    </worldbody>
+</mujoco>
