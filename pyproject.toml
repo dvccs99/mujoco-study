@@ -1,0 +1,18 @@
+[project]
+name = "mujoco-study"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Daniel-Salvador",email = "daniovictor@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10, <4.0"
+dependencies = [
+    "mujoco (>=3.3.0,<4.0.0)",
+    "taskipy (>=1.14.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
