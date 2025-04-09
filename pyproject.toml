@@ -19,5 +19,6 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
-denso = "python -m run_simulation --model-path 'mujoco_study/denso_vs050.xml'"
+denso = "python -m run_simulation --model-path ./mujoco_study/denso_vs050.xml"
 viewer = "python -m mujoco.viewer"
+terrain = "python ./run_simulation.py --model-path ./mujoco_study/terrain_test.xml"

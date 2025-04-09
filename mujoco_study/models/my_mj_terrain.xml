@@ -1,4 +1,4 @@
-<mujoco>
+<mujocoinclude>
     <compiler angle="radian" texturedir="assets/textures" meshdir="assets/meshes"/>
     <asset>
         <mesh name="terrain_mesh" file="my_mj_terrain.obj"/>
@@ -9,4 +9,4 @@
             <geom type="mesh" mesh="terrain_mesh" />
         </body>
     </worldbody>
-</mujoco>
+</mujocoinclude>

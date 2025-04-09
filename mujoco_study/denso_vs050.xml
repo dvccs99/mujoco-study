@@ -1,9 +1,9 @@
-<mujoco model="denso_vs050">
+<mujocoinclude model="denso_vs050">
     <compiler meshdir="assets/meshes/denso" />
     <default>
-        <!-- Correção do sistema de coordenadas do Fusion
-        pro MuJoCo, pode estar errado-->
         <geom type="mesh"/>
+        <joint type="hinge" limited="true"/>
+        <mesh scale="1 1 1"/>
     </default>
     <asset>
         <mesh name="base_link" file="base_link.stl" />
@@ -18,22 +18,22 @@
         <body name="base_link">
             <geom mesh="base_link" />
             <body name="J1">
-                <joint name="J1" pos="0.0 0.04 1.44" axis="0 0 1" limited="true" range="-170 170" />
+                <joint name="J1" pos="0.0 4 144.50" axis="0 0 1" range="-170 170" />
                 <geom mesh="J1" />
                 <body name="J2">
-                    <joint name="J2" pos="0.0 -76.50 341" axis="0 1 0" limited="true" range="-120 120"/>
+                    <joint name="J2" pos="0.0 -76.50 341" axis="0 1 0" range="-120 120"/>
                     <geom mesh="J2" />
                     <body name="J3">
-                        <joint name="J3" pos="0.0 -67.50 591" axis="0 1 0" limited="true" range="-120 151"/>
+                        <joint name="J3" pos="0.0 -67.50 591" axis="0 1 0" range="-120 151"/>
                         <geom mesh="J3" />
                         <body name="J4">
-                            <joint name="J4" pos="-105 4 601" axis="-1 0 0" limited="true" range="-270 270"/>
+                            <joint name="J4" pos="-105 4 601" axis="-1 0 0" range="-270 270"/>
                             <geom mesh="J4" />
                             <body name="J5">
-                                <joint name="J5" pos="-255 32.50 601" axis="0 1 0" limited="true" range="-120 120"/>
+                                <joint name="J5" pos="-255 32.50 601" axis="0 1 0" range="-120 120"/>
                                 <geom mesh="J5" />
                                 <body name="J6">
-                                    <joint name="J6" pos="-323 4 601" axis="1 0 0" limited="true" range="-360 360"/>
+                                    <joint name="J6" pos="-323 4 601" axis="1 0 0" range="-360 360"/>
                                     <geom mesh="J6" />
                                 </body>
                             </body>
@@ -43,5 +43,15 @@
             </body>
         </body>
     </worldbody>
-
-</mujoco>
+    <contact>
+        <exclude body1="base_link" body2="J1"/>
+    </contact>
+    <actuator>
+        <position name="J1" joint="J1" ctrllimited="true" ctrlrange="-100 100" kp="100" kv="100"/>
+        <position name="J2" joint="J2" ctrllimited="true" ctrlrange="-100 100" kp="100" kv="100"/>
+        <position name="J3" joint="J3" ctrllimited="true" ctrlrange="-100 100" kp="100" kv="100"/>
+        <position name="J4" joint="J4" ctrllimited="true" ctrlrange="-100 100" kp="100" kv="100"/>
+        <position name="J5" joint="J5" ctrllimited="true" ctrlrange="-100 100" kp="100" kv="100"/>
+        <position name="J6" joint="J6" ctrllimited="true" ctrlrange="-100 100" kp="100" kv="100"/>
+    </actuator>
+</mujocoinclude>
