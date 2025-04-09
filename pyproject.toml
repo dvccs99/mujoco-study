@@ -19,4 +19,4 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
-terrain_test = "python -m mujoco"
+viewer = "python -m mujoco.viewer"
