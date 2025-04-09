@@ -3,31 +3,37 @@
     <default>
         <!-- Correção do sistema de coordenadas do Fusion
         pro MuJoCo, pode estar errado-->
-        <geom type="box" xyaxes="1 0 0 0 0 1" />
+        <geom type="mesh"/>
     </default>
     <asset>
-        <mesh name="base_link" file="base_link.obj" />
-        <mesh name="J1" file="J1.obj" />
-        <mesh name="J2" file="J2.obj" />
-        <mesh name="J3" file="J3.obj" />
-        <mesh name="J4" file="J4.obj" />
-        <mesh name="J5" file="J5.obj" />
-        <mesh name="J6" file="J6.obj" />
+        <mesh name="base_link" file="base_link.stl" />
+        <mesh name="J1" file="J1.stl" />
+        <mesh name="J2" file="J2.stl" />
+        <mesh name="J3" file="J3.stl" />
+        <mesh name="J4" file="J4.stl" />
+        <mesh name="J5" file="J5.stl" />
+        <mesh name="J6" file="J6.stl" />
     </asset>
     <worldbody>
         <body name="base_link">
             <geom mesh="base_link" />
             <body name="J1">
+                <joint name="J1" pos="0.0 0.04 1.44" axis="0 0 1" limited="true" range="-170 170" />
                 <geom mesh="J1" />
                 <body name="J2">
+                    <joint name="J2" pos="0.0 -76.50 341" axis="0 1 0" limited="true" range="-120 120"/>
                     <geom mesh="J2" />
                     <body name="J3">
+                        <joint name="J3" pos="0.0 -67.50 591" axis="0 1 0" limited="true" range="-120 151"/>
                         <geom mesh="J3" />
                         <body name="J4">
+                            <joint name="J4" pos="-105 4 601" axis="-1 0 0" limited="true" range="-270 270"/>
                             <geom mesh="J4" />
                             <body name="J5">
+                                <joint name="J5" pos="-255 32.50 601" axis="0 1 0" limited="true" range="-120 120"/>
                                 <geom mesh="J5" />
                                 <body name="J6">
+                                    <joint name="J6" pos="-323 4 601" axis="1 0 0" limited="true" range="-360 360"/>
                                     <geom mesh="J6" />
                                 </body>
                             </body>
