@@ -20,6 +20,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 viewer = "python -m mujoco.viewer"
-denso = "python -m run_simulation --model-path ./mujoco_study/denso_vs050.xml"
+denso = "python -m run_simulation --model-path ./mujoco_study/denso_test.xml"
 spot = "python ./run_simulation.py --model-path ./mujoco_study/spot_test.xml"
 denso_terrain = "python ./run_simulation.py --model-path ./mujoco_study/denso_test.xml"

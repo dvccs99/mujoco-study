@@ -13,7 +13,7 @@
         <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5"
             reflectance="0.1" />
         <hfield name="myhfield" file="terrain/heightfieldtest.png" content_type="image/png"
-            size="10 10 0.5 0.5" />
+            size="5 5 0.5 0.5" />
     </asset>
     <worldbody>
         <body>
