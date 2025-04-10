@@ -1,18 +1,15 @@
 <mujocoinclude model="terrain">
-    <compiler angle="radian" />
     <asset>
         <mesh name="terrain_mesh" file="terrain/my_mj_terrain.obj" />
         <texture type="2d" name="grass" file="terrain/grass.png" />
         <material name="terrain_texture" texture="grass" texuniform="true"
             texrepeat="3 3"
             reflectance="0.2" />
-
     </asset>
     <worldbody>
-        <camera name="closeup" pos="0 0 3" />
         <body name="terrain" pos="0 0 0">
-            <geom class="collision" type="mesh" mesh="terrain_mesh" />
-            <geom class="visual" material="terrain_texture" mesh="terrain_mesh" />
+            <geom class="collision" type="mesh" mesh="terrain_mesh" pos="0 0 0" />
+            <geom class="visual" material="terrain_texture" mesh="terrain_mesh" pos=" 0 0 0" />
         </body>
     </worldbody>
 </mujocoinclude>
