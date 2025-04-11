@@ -1,6 +1,4 @@
 <mujocoinclude model="spot_arm">
-    <compiler angle="radian" meshdir="/assets/spot" />
-
     <option integrator="implicitfast" cone="elliptic" impratio="100" />
 
     <visual>
@@ -11,60 +9,60 @@
         <material name="BlackAbs" rgba="0.1 0.1 0.1 1" />
         <material name="wrap" rgba="0.878431 0.666666 0.227450 1" />
 
-        <mesh file="body_0.obj" />
-        <mesh file="body_1.obj" />
-        <mesh file="front_left_hip.obj" />
-        <mesh file="front_left_upper_leg_0.obj" />
-        <mesh file="front_left_upper_leg_1.obj" />
-        <mesh file="front_left_lower_leg.obj" />
-        <mesh file="front_right_hip.obj" />
-        <mesh file="front_right_upper_leg_0.obj" />
-        <mesh file="front_right_upper_leg_1.obj" />
-        <mesh file="front_right_lower_leg.obj" />
-        <mesh file="rear_left_hip.obj" />
-        <mesh file="rear_left_upper_leg_0.obj" />
-        <mesh file="rear_left_upper_leg_1.obj" />
-        <mesh file="rear_left_lower_leg.obj" />
-        <mesh file="rear_right_hip.obj" />
-        <mesh file="rear_right_upper_leg_0.obj" />
-        <mesh file="rear_right_upper_leg_1.obj" />
-        <mesh file="rear_right_lower_leg.obj" />
-        <mesh file="body_collision.obj" />
-        <mesh file="left_upper_leg_collision.obj" />
-        <mesh file="left_lower_leg_collision.obj" />
-        <mesh file="right_upper_leg_collision.obj" />
-        <mesh file="right_lower_leg_collision.obj" />
-        <mesh name="arm_link_sh0_base_coll" file="arm_link_sh0_base.obj" />
-        <mesh name="arm_link_sh0_left_motor_coll" file="arm_link_sh0_left_motor.obj" />
-        <mesh name="arm_link_sh0_right_motor_coll" file="arm_link_sh0_right_motor.obj" />
-        <mesh name="arm_link_hr0_coll" file="arm_link_hr0_coll.obj" />
-        <mesh name="arm_link_el0_coll" file="arm_link_el0_coll.obj" />
-        <mesh name="arm_link_el1_main_coll" file="arm_link_el1_main.obj" />
-        <mesh name="arm_link_el1_lip_coll" file="arm_link_el1_lip.obj" />
-        <mesh name="arm_link_wr0_coll" file="arm_link_wr0.obj" />
-        <mesh name="arm_link_wr1_coll" file="arm_link_wr1.obj" />
-        <mesh name="front_jaw_coll" file="front_jaw.obj" />
-        <mesh name="middle_jaw_coll" file="middle_jaw.obj" />
-        <mesh name="jaw_tooth_coll" file="jaw_tooth.obj" />
-        <mesh name="left_hinge_coll" file="left_hinge.obj" />
-        <mesh name="left_finger_coll" file="left_finger.obj" />
-        <mesh name="left_tooth_coll" file="left_tooth.obj" />
-        <mesh name="right_hinge_coll" file="right_hinge.obj" />
-        <mesh name="right_finger_coll" file="right_finger.obj" />
-        <mesh name="right_tooth_coll" file="right_tooth.obj" />
-        <mesh file="arm_link_sh0.obj" />
-        <mesh file="arm_link_sh1_0.obj" />
-        <mesh file="arm_link_sh1_1.obj" />
-        <mesh file="arm_link_hr0.obj" />
-        <mesh file="arm_link_el0.obj" />
-        <mesh file="arm_link_el1_0.obj" />
-        <mesh file="arm_link_el1_1.obj" />
-        <mesh file="arm_link_wr0_0.obj" />
-        <mesh file="arm_link_wr0_1.obj" />
-        <mesh file="arm_link_wr1_0.obj" />
-        <mesh file="arm_link_wr1_1.obj" />
-        <mesh file="arm_link_fngr_0.obj" />
-        <mesh file="arm_link_fngr_1.obj" />
+        <mesh file="spot/body_0.obj" />
+        <mesh file="spot/body_1.obj" />
+        <mesh file="spot/front_left_hip.obj" />
+        <mesh file="spot/front_left_upper_leg_0.obj" />
+        <mesh file="spot/front_left_upper_leg_1.obj" />
+        <mesh file="spot/front_left_lower_leg.obj" />
+        <mesh file="spot/front_right_hip.obj" />
+        <mesh file="spot/front_right_upper_leg_0.obj" />
+        <mesh file="spot/front_right_upper_leg_1.obj" />
+        <mesh file="spot/front_right_lower_leg.obj" />
+        <mesh file="spot/rear_left_hip.obj" />
+        <mesh file="spot/rear_left_upper_leg_0.obj" />
+        <mesh file="spot/rear_left_upper_leg_1.obj" />
+        <mesh file="spot/rear_left_lower_leg.obj" />
+        <mesh file="spot/rear_right_hip.obj" />
+        <mesh file="spot/rear_right_upper_leg_0.obj" />
+        <mesh file="spot/rear_right_upper_leg_1.obj" />
+        <mesh file="spot/rear_right_lower_leg.obj" />
+        <mesh file="spot/body_collision.obj" />
+        <mesh file="spot/left_upper_leg_collision.obj" />
+        <mesh file="spot/left_lower_leg_collision.obj" />
+        <mesh file="spot/right_upper_leg_collision.obj" />
+        <mesh file="spot/right_lower_leg_collision.obj" />
+        <mesh name="spot/arm_link_sh0_base_coll" file="arm_link_sh0_base.obj" />
+        <mesh name="spot/arm_link_sh0_left_motor_coll" file="arm_link_sh0_left_motor.obj" />
+        <mesh name="spot/arm_link_sh0_right_motor_coll" file="arm_link_sh0_right_motor.obj" />
+        <mesh name="spot/arm_link_hr0_coll" file="arm_link_hr0_coll.obj" />
+        <mesh name="spot/arm_link_el0_coll" file="arm_link_el0_coll.obj" />
+        <mesh name="spot/arm_link_el1_main_coll" file="arm_link_el1_main.obj" />
+        <mesh name="spot/arm_link_el1_lip_coll" file="arm_link_el1_lip.obj" />
+        <mesh name="spot/arm_link_wr0_coll" file="arm_link_wr0.obj" />
+        <mesh name="spot/arm_link_wr1_coll" file="arm_link_wr1.obj" />
+        <mesh name="spot/front_jaw_coll" file="front_jaw.obj" />
+        <mesh name="spot/middle_jaw_coll" file="middle_jaw.obj" />
+        <mesh name="spot/jaw_tooth_coll" file="jaw_tooth.obj" />
+        <mesh name="spot/left_hinge_coll" file="left_hinge.obj" />
+        <mesh name="spot/left_finger_coll" file="left_finger.obj" />
+        <mesh name="spot/left_tooth_coll" file="left_tooth.obj" />
+        <mesh name="spot/right_hinge_coll" file="right_hinge.obj" />
+        <mesh name="spot/right_finger_coll" file="right_finger.obj" />
+        <mesh name="spot/right_tooth_coll" file="right_tooth.obj" />
+        <mesh file="spot/arm_link_sh0.obj" />
+        <mesh file="spot/arm_link_sh1_0.obj" />
+        <mesh file="spot/arm_link_sh1_1.obj" />
+        <mesh file="spot/arm_link_hr0.obj" />
+        <mesh file="spot/arm_link_el0.obj" />
+        <mesh file="spot/arm_link_el1_0.obj" />
+        <mesh file="spot/arm_link_el1_1.obj" />
+        <mesh file="spot/arm_link_wr0_0.obj" />
+        <mesh file="spot/arm_link_wr0_1.obj" />
+        <mesh file="spot/spot/arm_link_wr1_0.obj" />
+        <mesh file="spot/arm_link_wr1_1.obj" />
+        <mesh file="spot/arm_link_fngr_0.obj" />
+        <mesh file="spot/arm_link_fngr_1.obj" />
     </asset>
 
     <default>

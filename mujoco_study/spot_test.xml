@@ -1,6 +1,6 @@
 <mujoco>
     <compiler meshdir="assets" texturedir="assets" angle="radian" />
-    <include file="models/spot.xml" />
+    <include file="models/spot_arm.xml" />
     <statistic center="0.15 0.1 0.38" extent=".8" meansize="0.05" />
 
 
@@ -12,13 +12,16 @@
             markrgb="0.8 0.8 0.8" width="300" height="300" />
         <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5"
             reflectance="0.1" />
+        <texture type="2d" name="grass" file="terrain/grass.png" />
+        <material name="terrain_texture" texture="grass" texuniform="true"
+            texrepeat="3 3"
+            reflectance="0.2" />
         <hfield name="myhfield" file="terrain/heightfieldtest.png" content_type="image/png"
             size="5 5 0.5 0.5" />
     </asset>
     <worldbody>
         <body>
-            <geom name="height_field" type="hfield" hfield="myhfield" material="groundplane" />
-            <geom name="floor" type="box" size="5 5 0.1" pos="0 0 -0.05" material="groundplane" />
+            <geom name="height_field" type="hfield" hfield="myhfield" material="terrain_texture" />
         </body>
     </worldbody>
 </mujoco>
