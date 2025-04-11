@@ -1,0 +1,21 @@
+<mujocoinclude>
+    <worldbody>
+        <body name="Cube_003" pos="0.040425557643175125 -0.040494322776794434 2.270876169204712"
+            quat="1.0 0.0 0.0 0.0">
+            <geom type="mesh" name="Cube_003 geom" mesh="Cube_003" />
+        </body>
+        <body name="Cube.002" pos="0.042375802993774414 -0.035219043493270874 1.3277878761291504"
+            quat="0.9139546751976013 0.04698885977268219 -0.11344115436077118 0.38679441809654236">
+            <geom type="mesh" name="Cube_002 geom" mesh="Cube_002" />
+        </body>
+        <body name="Cube" pos="0.040425557643175125 -0.0009294017218053341 2.932614803314209"
+            quat="1.0 0.0 0.0 0.0">
+            <geom type="mesh" name="Cube geom" mesh="Cube" />
+        </body>
+    </worldbody>
+    <asset>
+        <mesh name="Cube_003" file="cadeira/Cube_003.stl" />
+        <mesh name="Cube_002" file="cadeira/Cube_002.stl" />
+        <mesh name="Cube" file="cadeira/Cube.stl" />
+    </asset>
+</mujocoinclude>

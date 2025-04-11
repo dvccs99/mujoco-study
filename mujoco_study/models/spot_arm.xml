@@ -32,24 +32,24 @@
         <mesh file="spot/left_lower_leg_collision.obj" />
         <mesh file="spot/right_upper_leg_collision.obj" />
         <mesh file="spot/right_lower_leg_collision.obj" />
-        <mesh name="spot/arm_link_sh0_base_coll" file="arm_link_sh0_base.obj" />
-        <mesh name="spot/arm_link_sh0_left_motor_coll" file="arm_link_sh0_left_motor.obj" />
-        <mesh name="spot/arm_link_sh0_right_motor_coll" file="arm_link_sh0_right_motor.obj" />
-        <mesh name="spot/arm_link_hr0_coll" file="arm_link_hr0_coll.obj" />
-        <mesh name="spot/arm_link_el0_coll" file="arm_link_el0_coll.obj" />
-        <mesh name="spot/arm_link_el1_main_coll" file="arm_link_el1_main.obj" />
-        <mesh name="spot/arm_link_el1_lip_coll" file="arm_link_el1_lip.obj" />
-        <mesh name="spot/arm_link_wr0_coll" file="arm_link_wr0.obj" />
-        <mesh name="spot/arm_link_wr1_coll" file="arm_link_wr1.obj" />
-        <mesh name="spot/front_jaw_coll" file="front_jaw.obj" />
-        <mesh name="spot/middle_jaw_coll" file="middle_jaw.obj" />
-        <mesh name="spot/jaw_tooth_coll" file="jaw_tooth.obj" />
-        <mesh name="spot/left_hinge_coll" file="left_hinge.obj" />
-        <mesh name="spot/left_finger_coll" file="left_finger.obj" />
-        <mesh name="spot/left_tooth_coll" file="left_tooth.obj" />
-        <mesh name="spot/right_hinge_coll" file="right_hinge.obj" />
-        <mesh name="spot/right_finger_coll" file="right_finger.obj" />
-        <mesh name="spot/right_tooth_coll" file="right_tooth.obj" />
+        <mesh name="arm_link_sh0_base_coll" file="spot/arm_link_sh0_base.obj" />
+        <mesh name="arm_link_sh0_left_motor_coll" file="spot/arm_link_sh0_left_motor.obj" />
+        <mesh name="arm_link_sh0_right_motor_coll" file="spot/arm_link_sh0_right_motor.obj" />
+        <mesh name="arm_link_hr0_coll" file="spot/arm_link_hr0_coll.obj" />
+        <mesh name="arm_link_el0_coll" file="spot/arm_link_el0_coll.obj" />
+        <mesh name="arm_link_el1_main_coll" file="spot/arm_link_el1_main.obj" />
+        <mesh name="arm_link_el1_lip_coll" file="spot/arm_link_el1_lip.obj" />
+        <mesh name="arm_link_wr0_coll" file="spot/arm_link_wr0.obj" />
+        <mesh name="arm_link_wr1_coll" file="spot/arm_link_wr1.obj" />
+        <mesh name="front_jaw_coll" file="spot/front_jaw.obj" />
+        <mesh name="middle_jaw_coll" file="spot/middle_jaw.obj" />
+        <mesh name="jaw_tooth_coll" file="spot/jaw_tooth.obj" />
+        <mesh name="left_hinge_coll" file="spot/left_hinge.obj" />
+        <mesh name="left_finger_coll" file="spot/left_finger.obj" />
+        <mesh name="left_tooth_coll" file="spot/left_tooth.obj" />
+        <mesh name="right_hinge_coll" file="spot/right_hinge.obj" />
+        <mesh name="right_finger_coll" file="spot/right_finger.obj" />
+        <mesh name="right_tooth_coll" file="spot/right_tooth.obj" />
         <mesh file="spot/arm_link_sh0.obj" />
         <mesh file="spot/arm_link_sh1_0.obj" />
         <mesh file="spot/arm_link_sh1_1.obj" />
@@ -59,7 +59,7 @@
         <mesh file="spot/arm_link_el1_1.obj" />
         <mesh file="spot/arm_link_wr0_0.obj" />
         <mesh file="spot/arm_link_wr0_1.obj" />
-        <mesh file="spot/spot/arm_link_wr1_0.obj" />
+        <mesh file="spot/arm_link_wr1_0.obj" />
         <mesh file="spot/arm_link_wr1_1.obj" />
         <mesh file="spot/arm_link_fngr_0.obj" />
         <mesh file="spot/arm_link_fngr_1.obj" />
@@ -86,7 +86,7 @@
 
     <worldbody>
         <light name="spotlight" mode="targetbodycom" target="body" pos="3 0 4" cutoff="30" />
-        <body name="body" childclass="spot" pos="0 0 .75">
+        <body name="body" childclass="spot" pos="0 0 1.5">
             <light name="tracking" mode="trackcom" pos="0 0 2" />
             <freejoint name="freejoint" />
             <inertial pos="0.0063944 -9.81216e-05 0.000911379" mass="32.86"
