@@ -86,7 +86,7 @@
 
     <worldbody>
         <light name="spotlight" mode="targetbodycom" target="body" pos="3 0 4" cutoff="30" />
-        <body name="body" childclass="spot" pos="0 0 1.5">
+        <body name="body" childclass="spot" pos="0 0 4.5">
             <light name="tracking" mode="trackcom" pos="0 0 2" />
             <freejoint name="freejoint" />
             <inertial pos="0.0063944 -9.81216e-05 0.000911379" mass="32.86"
