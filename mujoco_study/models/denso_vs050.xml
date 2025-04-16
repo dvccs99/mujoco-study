@@ -6,35 +6,42 @@
     </default>
     <asset>
         <mesh name="base_link" file="denso/base_link.stl" />
-        <mesh name="J1" file="denso/J1.stl" />
-        <mesh name="J2" file="denso/J2.stl" />
-        <mesh name="J3" file="denso/J3.stl" />
-        <mesh name="J4" file="denso/J4.stl" />
-        <mesh name="J5" file="denso/J5.stl" />
-        <mesh name="J6" file="denso/J6.stl" />
+        <mesh name="J1" file="denso/J1.obj" />
+        <mesh name="J2" file="denso/J2.obj" />
+        <mesh name="J3" file="denso/J3.obj" />
+        <mesh name="J4" file="denso/J4.obj" />
+        <mesh name="J5" file="denso/J5.obj" />
+        <mesh name="J6" file="denso/J6.obj" />
     </asset>
     <worldbody>
         <body name="base_link">
+            <inertial mass="6.14" pos="0 0 0" />
             <geom mesh="base_link" />
             <body name="J1">
+                <inertial mass="2.03" pos="0 0 0" />
                 <joint name="J1" pos="0.0 0.004 0.14450" axis="0 0 1" range="-2.965 2.965" />
                 <geom mesh="J1" />
                 <body name="J2">
+                    <inertial mass="3.46" pos="0 0 0" />
                     <joint name="J2" pos="0.0 -0.07650 0.341" axis="0 1 0" range="-2.093 2.093" />
                     <geom mesh="J2" />
                     <body name="J3">
+                        <inertial mass="1.48" pos="0 0 0" />
                         <joint name="J3" pos="0.0 -0.06750 0.591" axis="0 1 0" range="-2.093 2.634" />
                         <geom mesh="J3" />
                         <body name="J4">
+                            <inertial mass="0.99" pos="0 0 0" />
                             <joint name="J4" pos="-0.105 0.004 0.601" axis="-1 0 0"
                                 range="-4.71 4.71" />
                             <geom mesh="J4" />
                             <body name="J5">
-                                <joint name="J5" pos="-0.255 0.03250 0.601" axis="0 1 0"
+                                <inertial mass="0.43" pos="0 0 0" />
+                                <joint name="J5" pos="-0.254 0.03250 0.601" axis="0 1 0"
                                     range="-2.093 2.093" />
                                 <geom mesh="J5" />
                                 <body name="J6">
-                                    <joint name="J6" pos="-0.323 0.004 0.601" axis="1 0 0"
+                                    <inertial mass="0.01" pos="0 0 0" />
+                                    <joint name="J6" pos="-0.323 0.0040 0.601" axis="1 0 0"
                                         range="-6.28 6.28" />
                                     <geom mesh="J6" />
                                 </body>
@@ -47,6 +54,8 @@
     </worldbody>
     <contact>
         <exclude body1="base_link" body2="J1" />
+        <exclude body1="J6" body2="J5" />
+        <exclude body1="J4" body2="J5" />
     </contact>
     <actuator>
         <position name="J1" joint="J1" ctrllimited="true" ctrlrange="-1 1" kp="1" kv="1" />
@@ -54,6 +63,6 @@
         <position name="J3" joint="J3" ctrllimited="true" ctrlrange="-1 1" kp="1" kv="1" />
         <position name="J4" joint="J4" ctrllimited="true" ctrlrange="-1 1" kp="1" kv="1" />
         <position name="J5" joint="J5" ctrllimited="true" ctrlrange="-1 1" kp="1" kv="1" />
-        <position name="J6" joint="J6" ctrllimited="true" ctrlrange="-1 1" kp="1" kv="1" />
+        <position name="J6" joint="J6" ctrllimited="true" ctrlrange="-1 1" kp="5" kv="5" />
     </actuator>
 </mujocoinclude>

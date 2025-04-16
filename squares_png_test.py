@@ -4,33 +4,44 @@ import numpy as np
 # Image size
 width, height = 100, 100
 
-# Number of shades of gray
-num_shades = 10
-gray_levels = np.linspace(255, 0, num_shades, dtype=np.uint8)
+# Create 10 descending shades from white to black and then mirror them
+half_shades = np.linspace(255, 0, 10, dtype=np.uint8)
+gray_levels = np.concatenate([half_shades, half_shades[::-1]])
+num_bands = len(gray_levels)  # should be 20
 
 # Center coordinates
 cx, cy = width // 2, height // 2
 
 # Create coordinate grids
 y, x = np.ogrid[:height, :width]
-
-# Distance from center in square layers
 square_dist = np.maximum(np.abs(x - cx), np.abs(y - cy))
 
-# Normalize to map into shade levels
-max_square_dist = square_dist.max()
-shade_indices = np.clip(
-    (square_dist / max_square_dist * num_shades).astype(int), 0, num_shades - 1
+# White center settings: a larger white square (40x40)
+center_size = 40
+half_center = center_size // 2
+
+# Create a mask for the white center
+white_mask = square_dist < half_center
+
+# For pixels outside the white center, we want to map their distance
+# (starting from the white center edge) to band indices from 1 to 19.
+# Compute the distance offset from the white center boundary:
+d = np.maximum(0, square_dist - half_center)
+max_d = d.max()  # Maximum distance outside the white center
+
+# Calculate the band index so that:
+# - At d = 0 (right at the white boundary), index will be 1 (just a bit darker than white)
+# - At d = max_d, index will reach 19.
+band_indices = np.clip(
+    ((d / max_d) * (num_bands - 1)).astype(int) + 1, 0, num_bands - 1
 )
 
-# Apply gray levels
-image_array = gray_levels[shade_indices]
+# Map the band indices to gray levels
+image_array = gray_levels[band_indices]
 
-# Optional: force center square to be pure white
-center_size = 20
-half = center_size // 2
-image_array[cy - half : cy + half, cx - half : cx + half] = 255
+# Override the white center with pure white
+image_array[white_mask] = 255
 
-# Save as image
+# Create and save the image
 img = Image.fromarray(image_array, mode="L")
-img.save("concentric_squares.png")
+img.save("concentric_squares_wave_fixed.png")

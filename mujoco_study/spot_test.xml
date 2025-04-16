@@ -16,8 +16,9 @@
         <material name="terrain_texture" texture="grass" texuniform="true"
             texrepeat="3 3"
             reflectance="0.2" />
-        <hfield name="myhfield" file="terrain/concentric_squares.png" content_type="image/png"
-            size="10 10 2 2" />
+        <hfield name="myhfield" file="terrain/concentric_squares_wave_fixed.png"
+            content_type="image/png"
+            size="10 10 4 4" />
     </asset>
     <worldbody>
         <body>
