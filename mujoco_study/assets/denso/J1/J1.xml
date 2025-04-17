@@ -1,0 +1,24 @@
+<mujoco model="J1">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <material name="255,255,255" specular="0.5" shininess="0.5" rgba="1.000000 1.000000 1.000000 1.0"/>
+    <material name="189,189,189" specular="0.5" shininess="0.5" rgba="0.741176 0.741176 0.741176 1.0"/>
+    <mesh file="J1_0.obj"/>
+    <mesh file="J1_1.obj"/>
+  </asset>
+  <worldbody>
+    <body name="J1">
+      <geom mesh="J1_0" material="189,189,189" class="visual"/>
+      <geom mesh="J1_1" material="255,255,255" class="visual"/>
+      <geom mesh="J1_0" class="collision"/>
+      <geom mesh="J1_1" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>

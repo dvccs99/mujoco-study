@@ -1,0 +1,24 @@
+<mujoco model="J5">
+  <default>
+    <default class="visual">
+      <geom group="2" type="mesh" contype="0" conaffinity="0"/>
+    </default>
+    <default class="collision">
+      <geom group="3" type="mesh"/>
+    </default>
+  </default>
+  <asset>
+    <material name="98,98,98" specular="0.5" shininess="0.5" rgba="0.384314 0.384314 0.384314 1.0"/>
+    <material name="189,189,189" specular="0.5" shininess="0.5" rgba="0.741176 0.741176 0.741176 1.0"/>
+    <mesh file="J5_0.obj"/>
+    <mesh file="J5_1.obj"/>
+  </asset>
+  <worldbody>
+    <body name="J5">
+      <geom mesh="J5_0" material="189,189,189" class="visual"/>
+      <geom mesh="J5_1" material="98,98,98" class="visual"/>
+      <geom mesh="J5_0" class="collision"/>
+      <geom mesh="J5_1" class="collision"/>
+    </body>
+  </worldbody>
+</mujoco>
