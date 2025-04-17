@@ -51,4 +51,8 @@ squares_png_test.py
 
 
 ### References
-[1] [A Review of Nine Physics Engines for Reinforcement Learning Research](https://arxiv.org/pdf/2407.08590)
+[A Review of Nine Physics Engines for Reinforcement Learning Research](https://arxiv.org/pdf/2407.08590) [1] 
+
+## Running files
+
+We use taskipy to facilitate running files for the scenes. `task spot` runs the Spot scene file and so on for other models, e.g:  `task denso`
