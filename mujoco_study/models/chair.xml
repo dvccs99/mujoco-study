@@ -14,8 +14,8 @@
         </body>
     </worldbody>
     <asset>
-        <mesh name="Cube_003" file="cadeira/Cube_003.stl" />
-        <mesh name="Cube_002" file="cadeira/Cube_002.stl" />
-        <mesh name="Cube" file="cadeira/Cube.stl" />
+        <mesh name="Cube_003" file="chair/Cube_003.stl" />
+        <mesh name="Cube_002" file="chair/Cube_002.stl" />
+        <mesh name="Cube" file="chair/Cube.stl" />
     </asset>
 </mujocoinclude>
