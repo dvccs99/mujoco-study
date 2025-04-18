@@ -1,0 +1,126 @@
+<mujocoinclude model="denso_vs050">
+    <default>
+        <default class="visual">
+            <geom group="2" type="mesh" contype="0" conaffinity="0" />
+        </default>
+        <default class="collision">
+            <geom group="3" type="mesh" />
+        </default>
+        <geom type="mesh" />
+        <joint type="hinge" limited="true" />
+        <mesh scale="0.001 0.001 0.001" />
+    </default>
+    <asset>
+        <material name="255,255,255" specular="0.5" shininess="0.5"
+            rgba="1.000000 1.000000 1.000000 1.0" />
+        <material name="189,189,189" specular="0.5" shininess="0.5"
+            rgba="0.741176 0.741176 0.741176 1.0" />
+        <material name="98,98,98" specular="0.5" shininess="0.5"
+            rgba="0.384314 0.384314 0.384314 1.0" />
+        <mesh file="denso/base_link_0.obj" />
+        <mesh file="denso/base_link_1.obj" />
+        <mesh file="denso/base_link_2.obj" />
+        <mesh file="denso/J1_0.obj" />
+        <mesh file="denso/J1_1.obj" />
+        <mesh file="denso/J2_0.obj" />
+        <mesh file="denso/J2_1.obj" />
+        <mesh file="denso/J3_0.obj" />
+        <mesh file="denso/J3_1.obj" />
+        <mesh file="denso/J4_0.obj" />
+        <mesh file="denso/J4_1.obj" />
+        <mesh file="denso/J4_2.obj" />
+        <mesh file="denso/J5_0.obj" />
+        <mesh file="denso/J5_1.obj" />
+        <mesh file="denso/J6_0.obj" />
+        <mesh file="denso/J6_1.obj" />
+    </asset>
+    <worldbody>
+        <body name="base_link">
+            <geom mesh="base_link_0" material="189,189,189" class="visual" />
+            <geom mesh="base_link_1" material="98,98,98" class="visual" />
+            <geom mesh="base_link_2" material="255,255,255" class="visual" />
+            <geom mesh="base_link_0" class="collision" />
+            <geom mesh="base_link_1" class="collision" />
+            <geom mesh="base_link_2" class="collision" />
+            <body name="J1">
+                <inertial pos="-0.00543802 -0.00933637 0.108956"
+                    quat="0.99215 0.123755 0.00152193 -0.017931" mass="2.03476"
+                    diaginertia="0.0160536 0.012538 0.00875348" />
+                <joint name="J1" pos="0.0 0.004 0.14450" axis="0 0 1" range="-2.96706 2.96706"
+                    actuatorfrcrange="-1 1" />
+                <geom mesh="J1_0" material="189,189,189" class="visual" />
+                <geom mesh="J1_1" material="255,255,255" class="visual" />
+                <geom mesh="J1_0" class="collision" />
+                <geom mesh="J1_1" class="collision" />
+                <body name="J2">
+                    <inertial pos="0.0131209 0.0807287 0.0827291"
+                        quat="0.999405 -0.0214235 0.0249224 0.0104547" mass="3.46317"
+                        diaginertia="0.0357491 0.0329189 0.0100009" />
+                    <joint name="J2" pos="0.0 -0.07650 0.341" axis="0 1 0"
+                        range="-2.0944 2.0944"
+                        actuatorfrcrange="-1 1" />
+                    <geom mesh="J2_0" material="189,189,189" class="visual" />
+                    <geom mesh="J2_1" material="255,255,255" class="visual" />
+                    <geom mesh="J2_0" class="collision" />
+                    <geom mesh="J2_1" class="collision" />
+                    <body name="J3">
+                        <inertial pos="-0.0319027 0.0678909 0.00380876"
+                            quat="0.0012934 0.746817 -0.0113232 0.664932" mass="1.48374"
+                            diaginertia="0.00451902 0.00440861 0.00220437" />
+                        <joint name="J3" pos="0.0 -0.06750 0.591" axis="0 1 0"
+                            range="-2.0944 2.63545"
+                            actuatorfrcrange="-1 1" />
+                        <geom mesh="J3_0" material="189,189,189" class="visual" />
+                        <geom mesh="J3_1" material="255,255,255" class="visual" />
+                        <geom mesh="J3_0" class="collision" />
+                        <geom mesh="J3_1" class="collision" />
+                        <body name="J4">
+                            <inertial pos="-0.0755386 -0.00214597 0.000983974"
+                                quat="-0.0146242 0.705922 0.0296457 0.707518" mass="0.996038"
+                                diaginertia="0.00309618 0.00271247 0.00152835" />
+                            <joint name="J4" pos="-0.105 0.004 0.601" axis="-1 0 0"
+                                range="-4.71239 4.71239"
+                                actuatorfrcrange="-1 1" />
+                            <geom mesh="J4_0" material="98,98,98" class="visual" />
+                            <geom mesh="J4_1" material="189,189,189" class="visual" />
+                            <geom mesh="J4_2" material="255,255,255" class="visual" />
+                            <geom mesh="J4_0" class="collision" />
+                            <geom mesh="J4_1" class="collision" />
+                            <geom mesh="J4_2" class="collision" />
+                            <body name="J5">
+                                <inertial pos="-0.0115322 0.0360268 -0.00114949"
+                                    quat="0.50032 0.504752 0.492879 0.501972" mass="0.435628"
+                                    diaginertia="0.000599044 0.000525991 0.000305965" />
+                                <joint name="J5" pos="-0.254 0.03250 0.601" axis="0 1 0"
+                                    range="-2.0944 2.0944"
+                                    actuatorfrcrange="-1 1" />
+                                <geom mesh="J5_0" material="189,189,189" class="visual" />
+                                <geom mesh="J5_1" material="98,98,98" class="visual" />
+                                <geom mesh="J5_0" class="collision" />
+                                <geom mesh="J5_1" class="collision" />
+                                <body name="J6">
+                                    <inertial pos="-0.00359897 0 0.000231037" mass="0.0109314"
+                                        diaginertia="4e-06 2e-06 2e-06" />
+                                    <joint name="J6" pos="-0.323 0.0040 0.601" axis="-1 0 0"
+                                        range="-6.28319 6.28319" actuatorfrcrange="-1 1" />
+                                    <geom mesh="J6_0" material="98,98,98" class="visual" />
+                                    <geom mesh="J6_1" material="189,189,189" class="visual" />
+                                    <geom mesh="J6_0" class="collision" />
+                                    <geom mesh="J6_1" class="collision" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator>
+        <position name="J1" joint="J1" ctrllimited="true" ctrlrange="-1 1" kp="10" kv="10" />
+        <position name="J2" joint="J2" ctrllimited="true" ctrlrange="-1 1" kp="10" kv="10" />
+        <position name="J3" joint="J3" ctrllimited="true" ctrlrange="-1 1" kp="10" kv="10" />
+        <position name="J4" joint="J4" ctrllimited="true" ctrlrange="-1 1" kp="10" kv="10" />
+        <position name="J5" joint="J5" ctrllimited="true" ctrlrange="-1 1" kp="10" kv="10" />
+        <position name="J6" joint="J6" ctrllimited="true" ctrlrange="-1 1" kp="5" kv="5" />
+    </actuator>
+</mujocoinclude>
