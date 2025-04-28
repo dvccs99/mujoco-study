@@ -113,7 +113,7 @@
     </worldbody>
     <actuator>
         <position name="J1" joint="J1" ctrllimited="true" inheritrange="1" kp="1500" kv="250" />
-        <position name="J2" joint="J2" ctrllimited="true" inheritrange="1" kp="1500" kv="250" />
+        <position name="J2" joint="J2" ctrllimited="true" inheritrange="1" kp="2000" kv="500" />
         <position name="J3" joint="J3" ctrllimited="true" inheritrange="1" kp="1500" kv="250" />
         <position name="J4" joint="J4" ctrllimited="true" inheritrange="1" kp="1000" kv="200" />
         <position name="J5" joint="J5" ctrllimited="true" inheritrange="1" kp="1000" kv="200" />

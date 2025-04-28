@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Args:
-    model_path: str = "mujoco_study/denso_vs050.xml"
+    model_path: str = "mujoco_study/denso_test.xml"
 
 
 args = tyro.cli(Args)
